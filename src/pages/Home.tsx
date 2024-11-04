@@ -36,6 +36,15 @@ const Home = () => {
         "https://placehold.co/300x300",
       ],
     },
+    {
+      title: "Phase 5 | visual photoshoot",
+      image: [
+        "https://placehold.co/300x300",
+        "https://placehold.co/300x300",
+        "https://placehold.co/300x300",
+        "https://placehold.co/300x300",
+      ],
+    },
   ];
   return (
     <div className="bg-MainbackgroundColor font-primary max-lg:p-10 max-xl:p-16 px-40 py-20 ">

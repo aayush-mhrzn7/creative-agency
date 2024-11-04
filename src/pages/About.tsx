@@ -1,4 +1,4 @@
-import { FaGoogle, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const About = () => {
   return (
     <div className=" bg-MainbackgroundColor max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary ">
@@ -42,8 +42,8 @@ const About = () => {
           <span className="font-medium text-lg mt-1">LinkedIn</span>
         </div>
         <div className="h-[200px] bg-shadowColor rounded-md shadow-md shadow-shadowColor flex justify-end p-4 items-start flex-col border">
-          <FaGoogle className="text-6xl text-blue-600" />
-          <span className="font-medium text-lg mt-1">Gmail</span>
+          <FaFacebook className="text-6xl text-blue-600" />
+          <span className="font-medium text-lg mt-1">Facebook</span>
         </div>
         <div className="h-[200px] bg-shadowColor rounded-md shadow-md shadow-shadowColor flex justify-end p-4 items-start flex-col border">
           <FaInstagram className="text-6xl text-[#E1306C]" />
