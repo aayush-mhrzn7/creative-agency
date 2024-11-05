@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
 const ContactMe = () => {
   return (
     <div className=" h-screen flex-col flex justify-center items-center font-primary bg-MainbackgroundColor">
-      <div className="bg-white p-8 rou rounded-md shadow-md m-5">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ type: "spring", duration: 0.7 }}
+        className="bg-white p-8 rou rounded-md shadow-md m-5"
+      >
         <h2 className="text-3xl font-heading text-primary my-5">
           I'd Love to Hear From you
         </h2>
@@ -13,7 +20,12 @@ const ContactMe = () => {
           <strong>twinkeshrestha099@gmail.com</strong>. <br /> I look forward to
           getting to know you !
         </p>
-        <form action="">
+        <form
+          action=""
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
           <div>
             <label
               className="font-semibold my-2 block text-xl rounded-md"
@@ -56,11 +68,18 @@ const ContactMe = () => {
               placeholder="your message here...."
             />
           </div>
-          <button className="w-full p-4 bg-primary my-4 rounded-md font-semibold text-xl text-white">
+          <motion.button
+            initial={{ scale: 1 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{
+              type: "spring",
+            }}
+            className="w-full p-4 bg-primary my-4 rounded-md font-semibold text-xl text-white"
+          >
             Submit
-          </button>
+          </motion.button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

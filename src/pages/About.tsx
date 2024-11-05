@@ -1,11 +1,35 @@
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className=" bg-MainbackgroundColor max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary ">
-      <h1 className="text-5xl font-heading text-center mb-10 text-accent">
-        About Me
-      </h1>
-      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-6">
+    <div className=" h-screen bg-MainbackgroundColor max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary ">
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.8, staggerChildren: 0.07 }}
+        className="text-5xl font-heading text-center mb-10 text-accent"
+      >
+        {String("About Me")
+          .split("")
+          .map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.8, staggerChildren: 0.07 }}
+        className="grid grid-cols-2 max-lg:grid-cols-1 gap-6"
+      >
         <img
           src="https://placehold.co/600x400"
           alt=""
@@ -35,8 +59,14 @@ const About = () => {
             skills, my traditions, and my changing surroundings.
           </p>
         </div>
-      </div>
-      <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-6">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.8, staggerChildren: 0.07 }}
+        className="grid grid-cols-3 max-sm:grid-cols-1 mt-6 gap-6"
+      >
         <div className="h-[200px] bg-shadowColor rounded-md shadow-md shadow-shadowColor flex justify-end p-4 items-start flex-col border">
           <FaLinkedinIn className="text-6xl text-blue-500" />
           <span className="font-medium text-lg mt-1">LinkedIn</span>
@@ -49,7 +79,7 @@ const About = () => {
           <FaInstagram className="text-6xl text-[#E1306C]" />
           <span className="font-medium text-lg mt-1">Instagram</span>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
