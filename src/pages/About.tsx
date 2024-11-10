@@ -1,7 +1,10 @@
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import pfp from "../assets/pfp.png";
+import lowres from "../assets/lowres.png";
+import { useState } from "react";
 const About = () => {
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className=" bg-MainbackgroundColor max-lg:pt-20 max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary">
       <motion.h1
@@ -33,8 +36,10 @@ const About = () => {
         className="grid grid-cols-2  max-lg:grid-cols-1 gap-6"
       >
         <img
-          src={pfp}
+          src={loaded ? pfp : lowres}
+          onLoad={() => setLoaded(true)}
           alt="Profile picture"
+          style={{ filter: loaded ? undefined : "blur(8px)" }}
           className="h-[490px] w-full object-cover object-center rounded-md"
         />
         <div className="bg-shadowColor rounded-md shadow-md shadow-shadowColor p-4">

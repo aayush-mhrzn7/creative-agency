@@ -13,6 +13,7 @@ import note1 from "../assets/note1.png";
 import note2 from "../assets/note2.png";
 import note3 from "../assets/note3.png";
 import note4 from "../assets/note4.png";
+
 import ImageModal from "../components/ImageModal";
 
 /* import Post from "./Post";
@@ -173,6 +174,9 @@ const Home = () => {
                   onClick={() => handleViewModalStatus(img)}
                   key={index}
                   src={img}
+                  style={{
+                    display: "block",
+                  }}
                   alt="image"
                   className="w-full object-cover h-[300px] rounded-lg shadow-md "
                 />
