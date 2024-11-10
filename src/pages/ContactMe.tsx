@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 const ContactMe = () => {
   return (
     <div className=" h-screen flex-col flex justify-center items-center font-primary bg-MainbackgroundColor">
@@ -6,20 +7,21 @@ const ContactMe = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         viewport={{ once: true }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring", duration: 0.7 }}
+        transition={{ type: "spring", duration: 0.6, stiffness: 100 }}
         className="bg-white p-8 rou rounded-md shadow-md m-5"
       >
         <h2 className="text-3xl font-heading text-primary my-5">
           I'd Love to Hear From you
         </h2>
         <h3 className="text-2xl font-medium">Get In Touch</h3>
-        <p className="text-xl">
+        <p className="text-xl ">
           If you would like to share your ideas or collaborate on a project,
           <br />
           please don't hesitate to reach out at{" "}
-          <strong>twinkeshrestha099@gmail.com</strong>. <br /> I look forward to
-          getting to know you !
+          <strong>aayushmaharjan497@gmail.com</strong>. <br /> I look forward to
+          getting to know you !{" "}
         </p>
+
         <form
           action=""
           onSubmit={(e) => {
@@ -68,6 +70,7 @@ const ContactMe = () => {
               placeholder="your message here...."
             />
           </div>
+
           <motion.button
             initial={{ scale: 1 }}
             whileTap={{ scale: 0.8 }}

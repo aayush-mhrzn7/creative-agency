@@ -22,9 +22,9 @@ const Header = () => {
     setCurrentSkillIndex(index);
   };
   return (
-    <div className="p-4 fixed top-0 left-0 max-lg:px-10 max-xl:px-16 px-40  bg-MainbackgroundColor font-primary flex justify-between items-center w-full">
+    <div className="p-4 fixed top-0 left-0 max-lg:px-10 max-xl:px-16 px-40 z-50  bg-MainbackgroundColor font-primary flex justify-between items-center w-full">
       <h4 className="text-xl capitalize text-primary font-bold">
-        Shreeya shrestha
+        Aayush Maharjan
       </h4>
       <ul className="flex justify-center  items-center gap-4 ">
         {navLinks.map((item, index) => (
