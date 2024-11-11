@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
-/* import { useNavigate } from "react-router-dom"; */
+import { useCallback, useEffect, useState } from "react";
 import book1 from "../assets/book1.png";
 import book2 from "../assets/book2.png";
 import book3 from "../assets/book3.png";
@@ -13,8 +12,8 @@ import note1 from "../assets/note1.png";
 import note2 from "../assets/note2.png";
 import note3 from "../assets/note3.png";
 import note4 from "../assets/note4.png";
-
 import ImageModal from "../components/ImageModal";
+import { viewImageModalTypes } from "../types/kaizen";
 
 /* import Post from "./Post";
 const varaints = {
@@ -37,29 +36,11 @@ const varaints = {
     };
   },
 };
-const imageArray = [
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-  "https://placehold.co/300x300",
-];
-const ref = [
-  "Various images sourced from different sites online, to provide the mood and inspirations for the collection. Specific credits where available",
-  "Image 1 : Photo from 'Of Light’ by Hussein Chalayan and Nick Knight ",
-  "Image 2 : 'Synesthesia' by Andy Chapman on Flickr",
-  "Image 3 : Collagerittard on Tumblr",
-  "Image 4 : Kaleidoscope Kids Shot By Harper Smith",
-  "Image 5 : Deborah Parcesepe by Francesco Ormando ",
-  "Image 6 : Wavy 1 - Purple/Orange by Larry Carlson",
-]; */
+*/
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [viewModalStatus, setImageModalStatus] = useState(false);
-  const [viewModal, setImageModal] = useState();
+  const [viewModal, setImageModal] = useState<string>("");
   const array = [
     {
       title: "Kaizen | an application for building consitency",
@@ -92,17 +73,16 @@ const Home = () => {
     "React Developer",
     "Responsive Web Developer",
   ];
-  /*  const navigate = useNavigate(); */
-  const showNextSkill = () => {
+  const showNextSkill = useCallback(() => {
     setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skills.length);
-  };
+  }, [skills.length]);
   useEffect(() => {
     const timer = setInterval(() => {
       showNextSkill();
     }, 2000);
     return () => clearInterval(timer);
-  }, []);
-  const handleViewModalStatus = (img: any) => {
+  }, [showNextSkill, currentSkillIndex]);
+  const handleViewModalStatus = (img: viewImageModalTypes) => {
     setImageModalStatus(!viewModalStatus);
     setImageModal(img);
   };

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi";
-const ImageModal = ({ img, onClose }: any) => {
+import { imageModalTypes } from "../types/kaizen";
+const ImageModal = ({ img, onClose }: imageModalTypes) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div
