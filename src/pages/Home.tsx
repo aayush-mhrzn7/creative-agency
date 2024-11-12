@@ -14,6 +14,7 @@ import note3 from "../assets/note3.png";
 import note4 from "../assets/note4.png";
 import ImageModal from "../components/ImageModal";
 import { viewImageModalTypes } from "../types/kaizen";
+import Footer from "../components/Footer";
 
 /* import Post from "./Post";
 const varaints = {
@@ -102,7 +103,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ ease: "easeInOut" }}
-            className="text-7xl font-bold uppercase text-primary"
+            className="text-7xl max-sm:text-5xl font-bold uppercase text-primary"
           >
             {skills[currentSkillIndex]}
           </motion.h1>
@@ -311,14 +312,7 @@ const Home = () => {
           performance.
         </motion.p>
       </motion.div>
-      {/*   <Post
-        heading="Vibrant truth"
-        subHeading="Phase II : My Alter-ego"
-        description="Craving freedom in a strict household, shaped by the protective mentality of traditional Nepalese society, was challenging. I longed for the simple pleasures that many of the older teenagers enjoyed— spending time with friends whenever they could, exploring the city, the cafes and traveling somewhere far from the city.  The conservative nature of my upbringing, driven by concerns for women's safety, often limited these experiences.Walking through the alleys of Kathmandu, I observed the vibrant local life. Children playing outside their homes, the youths hanging out in cafes, and the overall busyness of the local markets and people revealed a different way of living. These experiences helped me discover my desire to be free and independent. I connected deeply with the rhythm of these alleys, finding a sense of freedom that eluded me at home.The boldness and joy of the locals inspired me to envision an independent, open, and vibrant self, embracing life without fear of judgment. These alleys delivered my own truth ,  this beautiful vision of my alter ego , where I have my little freedoms—I  feel bold and connected to the world around me."
-        imageArray={imageArray}
-        coverImage="https://placehold.co/600x200"
-        references={ref}
-      /> */}
+      <Footer />
     </div>
   );
 };

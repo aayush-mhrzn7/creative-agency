@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ContactMe = () => {
   return (
-    <div className=" h-screen flex-col flex justify-center items-center font-primary bg-MainbackgroundColor">
+    <div className=" h-screen flex-col p-5 flex justify-center items-center font-primary bg-MainbackgroundColor">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         viewport={{ once: true }}
@@ -10,11 +10,11 @@ const ContactMe = () => {
         transition={{ type: "spring", duration: 0.6, stiffness: 100 }}
         className="bg-white p-8 rou rounded-md shadow-md m-5"
       >
-        <h2 className="text-3xl font-heading text-primary my-5">
+        <h2 className="text-3xl max-sm:text-xl font-heading text-primary my-5">
           I'd Love to Hear From you
         </h2>
-        <h3 className="text-2xl font-medium">Get In Touch</h3>
-        <p className="text-xl ">
+        <h3 className="text-2xl max-sm:text-lg font-medium">Get In Touch</h3>
+        <p className="text-xl max-sm:text-base">
           If you would like to share your ideas or collaborate on a project,
           <br />
           please don't hesitate to reach out at{" "}
@@ -30,7 +30,7 @@ const ContactMe = () => {
         >
           <div>
             <label
-              className="font-semibold my-2 block text-xl rounded-md"
+              className=" max-sm:text-base font-semibold my-2 block text-xl rounded-md"
               htmlFor="name"
             >
               Your Name
@@ -44,7 +44,7 @@ const ContactMe = () => {
           </div>
           <div>
             <label
-              className="font-semibold my-2 block text-xl rounded-md"
+              className=" max-sm:text-base font-semibold my-2 block text-xl rounded-md"
               htmlFor="email"
             >
               Email
@@ -58,7 +58,7 @@ const ContactMe = () => {
           </div>
           <div>
             <label
-              className="font-semibold my-2 block text-xl rounded-md"
+              className=" max-sm:text-base font-semibold my-2 block text-xl rounded-md"
               htmlFor="message"
             >
               Your Message
