@@ -47,7 +47,7 @@ const Home = () => {
       title: "Kaizen | an application for building consitency",
       image: [kaizen3, kaizen4, kaizen1, kaizen2],
       date: "2024/10/10 - 2024/11/4",
-      liveLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      liveLink: "https://kaizen-seven.vercel.app/",
       githubLink: "https://github.com/aayush-mhrzn7/kaizen",
     },
     {
