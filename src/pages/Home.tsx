@@ -296,20 +296,14 @@ const Home = () => {
           transition={{ ease: "easeInOut", duration: 0.6, delay: 0.4 }}
           className=" text-xl text-black"
         >
-          Kishan Care, powered by Yuwasoft Technologies, is revolutionizing
-          dairy and vet accounting with smart accounting solutions. I developed
-          their{" "}
-          <strong className="capitalize">
-            entire front-end web application
-          </strong>{" "}
-          using <strong className="capitalize">React</strong>, Collaborating
-          with the backend teams to integrate the{" "}
-          <strong className="capitalize">API. </strong>
-          Additionally, I implemented{" "}
-          <strong className="capitalize">responsive design, </strong>
-          ensuring a seamless user experience across various devices, and
-          contributed to the UI/UX improvements to enhance usability and
-          performance.
+          Kishancare is a subsidiary of <strong>YuwaSoft Technologies</strong>{" "}
+          which is a revolutionizing dairy vet account solution. I helped
+          developing their <strong> frontend web application</strong> by the
+          help of technologies like <strong>React, Tailwind CSS, Redux </strong>
+          and collaborated with backend teams to integrate <strong> API</strong>
+          . Additionally, I contributed to the{" "}
+          <strong>UI/UX improvements</strong> to enhance usability and
+          performance
         </motion.p>
       </motion.div>
       <Footer />
