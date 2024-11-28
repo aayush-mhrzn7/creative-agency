@@ -6,7 +6,7 @@ import { useState } from "react";
 const About = () => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <div className=" h-screen bg-MainbackgroundColor max-lg:pt-20 max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary">
+    <div className=" h-screen overflow-auto overflow-y-auto bg-MainbackgroundColor max-lg:pt-20 max-lg:p-10 max-xl:p-16 px-40 py-20 font-primary">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
